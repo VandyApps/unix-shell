@@ -18,7 +18,7 @@ Once we get to this point, you will have a basic understanding of how to use vim
 
 #### apt-get
 
-So we want to pull down [this repository](in order to do this, we need to use the [git command line tool](https://git-scm.com/about). 
+So we want to pull down [this repository](https://github.com/VandyApps/unix-shell)in order to do this, we need to use the [git command line tool](https://git-scm.com/about). 
 
 We can type 
 ```
