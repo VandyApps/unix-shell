@@ -31,8 +31,8 @@ vim ~/.vimrc
 :e ~/unix-shell/vim-setup/init_config
 ```
 Now we want to highlight all of the lines in this file except the first one, copy them, and paste them in the previous file, ~/.vimrc:
-* <shift>-v selects an entire line
-* <shift>-G moves your cursor to the bottom of a file (and gg moves it to the top)
+* shift-v selects an entire line
+* shift-G moves your cursor to the bottom of a file (and gg moves it to the top)
 * y copies the selected text
 * bp moves you back to the _P_revious _B_uffer you were in (which should be ~/.vimrc)
 * p pastes your text that’s on vim’s clipboard
