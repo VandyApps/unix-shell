@@ -11,7 +11,7 @@ Right now this is an empty file, and vim will basically read it as a script of i
 ```
 nmap <space> :
 ```
-to the file. This maps the spacebar key to the colon input, so that you can do all of your vim commands like :q, :w, :e, etc. by typing <spacebar>q, <spacebar>w etc. I just think spacebar is easier. If you disagree or want to change it to something else you find fits better, go for it.
+to the file. This maps the spacebar key to the colon input, so that you can do all of your vim commands like :q, :w, :e, etc. by typing spacebar-q, spacebar-w etc. I just think spacebar is easier. If you disagree or want to change it to something else you find fits better, go for it.
 
 NOTE: since the .vimrc file starts with a “.” it will NOT show up when you type “ls”. You need to type “ls -a” in order to see dotted files.
 
