@@ -16,7 +16,7 @@ to the file. This maps the spacebar key to the colon input, so that you can do a
 NOTE: since the .vimrc file starts with a “.” it will NOT show up when you type “ls”. You need to type “ls -a” in order to see dotted files.
 
 Now save and quit (for the last time with actually typing :wq), and upon opening again, vim will have the configuration you specified. I have provided a bunch of helpful .vimrc configurations on our github, so let’s make sure we’re up to date with the [Unix Shell Session Github Repository](https://github.com/VandyApps/unix-shell/):
-*cd to your folder (probably called something like unix-shell) that is linked to the unix shell session 
+* cd to your folder (probably called something like unix-shell) that is linked to the unix shell session 
 * then type “git fetch” and then “git pull” to update your folder
 Now you should have a folder in your directory called “vim-setup”. This contains some helpful pre-written .vimrc configurations.
 
