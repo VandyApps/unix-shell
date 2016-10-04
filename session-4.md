@@ -25,7 +25,7 @@ The ls command is useful when run without any options at all. It defaults to dis
 If we want beyond what it provides by default, we tell it a bit more. In this case, we want it to display a different directory, pypy. What we did is specify what is known as a positional argument. It’s named so because the program should know what to do with the value, solely based on where it appears on the command line. This concept is more relevant to a command like cp, whose most basic usage is cp SRC DEST. The first position is what you want copied, and the second position is where you want it copied to.
 Now, say we want to change behaviour of the program. In our example, we display more info for each file instead of just showing the file names. The -l in that case is known as an optional argument.
 That’s a snippet of the help text. It’s very useful in that you can come across a program you have never used before, and can figure out how it works simply by reading its help text.
-The basics
+####The basics
 Let us start with a very simple example which does (almost) nothing:
 ```
 import argparse
@@ -139,7 +139,7 @@ prog.py: error: argument square: invalid int value: 'four'
 That went well. The program now even helpfully quits on bad illegal input before proceeding.
 
 Introducing Optional arguments
-So far we, have been playing with positional arguments. Let us have a look on how to add optional ones:
+So far we have been playing with positional arguments. Let us have a look on how to add optional ones:
 ```
 import argparse
 parser = argparse.ArgumentParser()
@@ -199,7 +199,8 @@ Here is what is happening:
 The option is now more of a flag than something that requires a value. We even changed the name of the option to match that idea. Note that we now specify a new keyword, action, and give it the value "store_true". This means that, if the option is specified, assign the value True to args.verbose. Not specifying it implies False.
 It complains when you specify a value, in true spirit of what flags actually are.
 Notice the different help text.
-Short options
+
+####Short options
 If you are familiar with command line usage, you will notice that I haven’t yet touched on the topic of short versions of the options. It’s quite simple:
 ```
 import argparse
@@ -223,7 +224,7 @@ optional arguments:
 ```
 Note that the new ability is also reflected in the help text.
 
-Combining Positional and Optional arguments
+####Combining Positional and Optional arguments
 Our program keeps growing in complexity:
 ```
 import argparse
@@ -427,7 +428,7 @@ $ python prog.py 4
 ```
 You can go quite far just with what we’ve learned so far, and we have only scratched the surface. The argparse module is very powerful, and we’ll explore a bit more of it before we end this tutorial.
 
-Getting a little more advanced
+####Getting a little more advanced
 What if we wanted to expand our tiny program to perform other powers, not just squares:
 ```
 import argparse
@@ -487,7 +488,7 @@ $ python prog.py 4 2 -vv
 Running 'prog.py'
 4^2 == 16
 ```
-Conflicting options
+####Conflicting options
 So far, we have been working with two methods of an argparse.ArgumentParser instance. Let’s introduce a third one, add_mutually_exclusive_group(). It allows for us to specify options that conflict with each other. Let’s also change the rest of the program so that the new functionality makes more sense: we’ll introduce the --quiet option, which will be the opposite of the --verbose one:
 ```
 import argparse
@@ -545,7 +546,7 @@ elif args.verbose:
 else:
     print "{}^{} == {}".format(args.x, args.y, answer)
 ```
-Note that slight difference in the usage text. Note the [-v | -q], which tells us that we can either use -v or -q, but not both at the same time:
+Note the slight difference in the usage text. Note the [-v | -q], which tells us that we can either use -v or -q, but not both at the same time:
 ```
 $ python prog.py --help
 usage: prog.py [-h] [-v | -q] x y
